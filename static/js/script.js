@@ -21,11 +21,15 @@ halloween = {
 
 	show_popup : (param) => {
 
-		let main_element = $('.overlay'),
-			overlay_element = $('.popup');
+		let main_element = $('.popup'),
+			overlay_element = $('.overlay');
 
 		if (param)
 		{
+			let product_element = $(element);
+
+			main_element.find('[name=product-id]').val(product_element.parents('.product-parent').data('id'));
+
 			main_element.show();
 			overlay_element.show();
 		}
