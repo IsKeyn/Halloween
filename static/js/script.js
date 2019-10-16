@@ -19,7 +19,7 @@ halloween = {
 		});
 	},
 
-	show_popup : (param) => {
+	show_popup : (param, element) => {
 
 		let main_element = $('.popup'),
 			overlay_element = $('.overlay');
@@ -46,7 +46,7 @@ halloween = {
 };
 
 $(document)
-	.on('click', '.js_buy', function () { halloween.show_popup(true) })
+	.on('click', '.js_buy', function () { halloween.show_popup(true, this) })
 	.on('click', '.js_close_popup', function () { halloween.show_popup(false) })
 	.on('click', '.js_overlay', function () { halloween.show_popup(false) })
 	.on('click', '.js_send', function () { halloween.send_order(); });
